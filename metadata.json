@@ -1,0 +1,8 @@
+{
+  "name": "The Tie Breaker",
+  "description": "An interactive decision-making assistant that uses AI to analyze dilemmas via Pros/Cons lists, Comparison Tables, and SWOT Analyses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
