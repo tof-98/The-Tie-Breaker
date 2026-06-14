@@ -4,6 +4,8 @@ import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
 import dotenv from "dotenv";
 
+// Load .env.local first (for local development), then .env
+dotenv.config({ path: '.env.local' });
 dotenv.config();
 
 async function startServer() {
@@ -46,8 +48,8 @@ User-provided Options: ${options.length > 0 ? JSON.stringify(options) : "None (d
 
 Perform a thorough analysis consisting of:
 1. Pros and Cons: Formulate rigorous advantages and disadvantages, assigning a weight of importance (1 to 5) and a descriptive category. Provide a summary of the pro/con balance.
-2. Comparative Analysis: Evaluate options against relevant, high-quality decision criteria (e.g. cost, peace of mind, effort, time). Rate each option from 1 to 5 for each criterion, and explain the score with contextual notes. Deduce the winning option and include reasoning. If the user provided no options, create logical binary or multi-way options (e.g., pursue vs. defer/avoid) and compare them.
-3. SWOT Analysis: Detail the Strengths (internal advantages), Weaknesses (internal risks/limitations), Opportunities (external positive factors/upsides), and Threats (external hurdles/risks) of the situation/options. Write a SWOT summary.
+2. Comparative Analysis: Evaluate options against relevant, high-quality decision criteria (e.g. cost, peace of mind, effort, time). Rate each option from 1 to 5 for each criterion, and explain th[...]
+3. SWOT Analysis: Detail the Strengths (internal advantages), Weaknesses (internal risks/limitations), Opportunities (external positive factors/upsides), and Threats (external hurdles/risks) of th[...]
 4. Definitive Verdict (The Tie Breaker): Resolve the dilemma by analyzing difficult trade-offs and delivering a clear, singular, final guidance with concrete next steps.
       `;
 
